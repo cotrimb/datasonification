@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- This title appears in the tab of your web browser. -->
+    <title>Week 3: Introduction to JavaScript</title>
+
+    <!-- MathJax CDN for rendering LaTeX equations in a web browser -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- This is one way to stylize your HTML.  -->
+    <!-- It's not as efficient as using a Cascading Style Sheet (CSS). -->
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+        }
+
+        /* this ensures our equations will be on the left side of the screen */
+        .left-align {
+            text-align: left; 
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Example: Typing JavaScript code directly into an HTML file.
+        window.MathJax = {
+            tex: {
+                displayMath: [['$$', '$$']],
+                inlineMath: [['\\(', '\\)']],
+            },
+            chtml: {
+                displayAlign: 'left'  // Left align displayed equations
+            }
+        };
+    </script>
+</head>
+<body>
+  <article>
+    <!-- This is how you can add an author attribution within the HTML document (in Hcard format). -->
+    <header>
+      <h1 class="headline">MHL Data Sonification — Week 3: Introduction to JavaScript</h1>
+      <div class="byline vcard">
+        <address class="author">by <a rel="author" class="url fn n" href="https://louisgoldford.com/">Dr. Louis Goldford</a></address>
+        on <time pubdate datetime="2024-10-14" title="October 14th, 2024">October 14th, 2024</time>
+      </div>
+    </header>
+
+    <div class="article-content">
+        <h2>Opening the JavaScript Console in Chrome</h2>
+        <p>
+            To view the output of your JavaScript (JS) console.log() calls and any errors in the <strong>JavaScript Console</strong>:
+        </p>
+            <ul>
+                <li><strong>Windows</strong>: Press <strong>Ctrl + Shift + J</strong> to open the console in Chrome.</li>
+                <li><strong>Mac</strong>: Press <strong>Cmd + Option + J</strong> to open the console in Chrome.</li>
+            </ul>
+  
+        <!-- What is a CDN? -->
+        <p>
+            A <strong>CDN</strong> (Content Delivery Network) is a system of distributed servers that deliver content, such as JavaScript libraries (like MathJax or jQuery), to users. Using a CDN can speed up content delivery by serving the requested resources from the closest server available. 
+            In this example, we use a MathJax CDN to render LaTeX math equations in the browser.
+        </p>
+
+        <h3>Math Example: Convert BPM to Beat Duration</h3>
+        <p>
+            The formula for converting <strong>BPM</strong> (beats per minute) to <strong>beat duration</strong> (milliseconds) is:
+        </p>
+        <div class="left-align">
+            $$ \text{beat duration (ms)} = \frac{60,000}{\text{BPM}} $$
+        </div>
+        <p>
+            To perform the <strong>reverse</strong> operation, the formula to convert <strong>beat duration</strong> to <strong>BPM</strong> is:
+        </p>
+        <div class="left-align">
+            $$ \text{BPM} = \frac{60,000}{\text{beat duration (ms)}} $$
+        </div>
+        <p>
+            LaTeX documentation in German: <a href="https://www.dante.de/">https://www.dante.de/</a><br>LaTeX documentation in English: <a href="https://www.latex-project.org/">https://www.latex-project.org/</a>
+        </p>
+
+        <h3>Console Output Errors</h3>
+        <p>
+            The errors displayed in the console seem related to WebSocket or server connection issues. Specifically:
+            <ul>
+                <li><strong>ERR_NAME_NOT_RESOLVED</strong>: This error suggests the browser could not resolve the hostname of a resource you're trying to load, possibly due to a network issue or incorrect URL.</li>
+                <li><strong>WebSocket connection failed</strong>: This error indicates that a WebSocket connection to the server failed. It could be due to network connectivity issues, server unavailability, or incorrect WebSocket URL configurations.</li>
+            </ul>
+        </p>
+    </div>
+  </article>
+
+  <!-- We will complete our exercises in a separate JavaScript file. Load the JavaScript file below. -->
+  <!-- Example: Referencing an external file containing your JavaScript code within an HTML file. -->
+  <script src="week-3-exercises.js"></script>
+</body>
+</html>
